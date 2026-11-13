@@ -1,0 +1,35 @@
+# Credentials and local configuration
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+credentials*.json
+secrets*.json
+# Python and notebooks
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+# Local archives and private source data
+private/
+raw/
+checkpoints/
+*.zip
+# LaTeX intermediates
+*.aux
+*.log
+*.out
+*.toc
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+# Editor and OS files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+# Locally regenerated analysis
+results/*
+!results/README.md

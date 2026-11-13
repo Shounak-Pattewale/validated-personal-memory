@@ -1,0 +1,48 @@
+{
+  "seed": 20261112,
+  "bootstrap_replicates": 20000,
+  "results": {
+    "LoCoMo-QA": {
+      "n": 1986,
+      "gemma": 0.5303128914858583,
+      "nemotron": 0.42572417930671097,
+      "difference": 0.10458871217914731,
+      "ci": [
+        0.08843518393767517,
+        0.12041830073164167
+      ],
+      "method": "Paired conversation-cluster bootstrap; 10 conversations, question-weighted ratio",
+      "truncated_pairs": 15,
+      "excluding_truncated_difference": 0.10590305970560815,
+      "worst_case_truncation_difference": 0.10023940765732038
+    },
+    "LongMemEval-S": {
+      "n": 500,
+      "gemma": 0.79,
+      "nemotron": 0.586,
+      "difference": 0.204,
+      "ci": [
+        0.16,
+        0.248
+      ],
+      "method": "Paired question bootstrap; shared-history dependence not established from metadata",
+      "truncated_pairs": 6,
+      "excluding_truncated_difference": 0.20647773279352227,
+      "worst_case_truncation_difference": 0.198
+    },
+    "RULER-v1-adapted": {
+      "n": 39000,
+      "gemma": 0.9705807743589745,
+      "nemotron": 0.9505500230769232,
+      "difference": 0.02003075128205128,
+      "ci": [
+        0.017183647435897443,
+        0.022881631538461542
+      ],
+      "method": "Paired task-stratified bootstrap, blocking matching sample indices across all 6 lengths; fixed 13 tasks",
+      "truncated_pairs": 42,
+      "excluding_truncated_difference": 0.01918474511011859,
+      "worst_case_truncation_difference": 0.019087161538461538
+    }
+  }
+}

@@ -1,0 +1,91 @@
+{
+  "LoCoMo-QA": {
+    "wins": 852,
+    "ties": 607,
+    "losses": 527,
+    "macro_category_gemma": 0.461107048114488,
+    "macro_category_nemotron": 0.3594658834032133
+  },
+  "LongMemEval-S": {
+    "wins": 124,
+    "ties": 354,
+    "losses": 22,
+    "macro_category_gemma": 0.8276291690765376,
+    "macro_category_nemotron": 0.6087470278259753
+  },
+  "RULER-v1-adapted": {
+    "wins": 2228,
+    "ties": 36295,
+    "losses": 477,
+    "macro_category_gemma": 0.9705807743589744,
+    "macro_category_nemotron": 0.950550023076923
+  },
+  "lme_exclude_abstention_preference": {
+    "n": 440,
+    "gemma": 0.7818181818181819,
+    "nemotron": 0.615909090909091,
+    "difference": 0.16590909090909092
+  },
+  "leave_one_conversation_out": {
+    "false": {
+      "min": 0.09990495685209848,
+      "max": 0.10998577516581692
+    },
+    "true": {
+      "min": 0.011909335659005767,
+      "max": 0.023740080489336318
+    }
+  },
+  "ruler_prompt_sample_verified": {
+    "task": "131072_niah_multikey_3",
+    "unique_prompts": 500,
+    "model_records": 1000,
+    "sha256": "dde62f07b17502b32b698b3c1abc995a164b818f6174b0b1c81a16dde3ab9eea"
+  },
+  "qa_1_repeated_reference_indices": 500,
+  "qa_2_repeated_reference_indices": 500,
+  "usage": [
+    {
+      "model": "gemma4:31b",
+      "suite": "LoCoMo-QA",
+      "native_input": 52651452,
+      "native_output": 26832,
+      "cached_input": 52087136
+    },
+    {
+      "model": "gemma4:31b",
+      "suite": "LongMemEval-S",
+      "native_input": 54505887,
+      "native_output": 28869,
+      "cached_input": 21216
+    },
+    {
+      "model": "gemma4:31b",
+      "suite": "RULER-v1-adapted",
+      "native_input": 1819068298,
+      "native_output": 1624218,
+      "cached_input": 270720256
+    },
+    {
+      "model": "nemotron-3-super",
+      "suite": "LoCoMo-QA",
+      "native_input": 50978798,
+      "native_output": 68069,
+      "cached_input": 32218768
+    },
+    {
+      "model": "nemotron-3-super",
+      "suite": "LongMemEval-S",
+      "native_input": 54331055,
+      "native_output": 33962,
+      "cached_input": 0
+    },
+    {
+      "model": "nemotron-3-super",
+      "suite": "RULER-v1-adapted",
+      "native_input": 1812496080,
+      "native_output": 884086,
+      "cached_input": 134650336
+    }
+  ]
+}

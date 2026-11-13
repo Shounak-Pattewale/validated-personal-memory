@@ -1,0 +1,30 @@
+{
+  "capabilities": [
+    "completion",
+    "thinking",
+    "tools",
+    "vision"
+  ],
+  "details": {
+    "families": null,
+    "family": "gemma4",
+    "format": "",
+    "parameter_size": "32682372656",
+    "parent_model": "gemma4:31b",
+    "quantization_level": "BF16"
+  },
+  "model_info": {
+    "gemma4.context_length": 262144,
+    "gemma4.embedding_length": 5376,
+    "general.architecture": "gemma4",
+    "general.parameter_count": 32682372656
+  },
+  "modified_at": "2026-04-02T09:00:00-08:00",
+  "thinking": {
+    "default": false,
+    "values": [
+      false,
+      true
+    ]
+  }
+}

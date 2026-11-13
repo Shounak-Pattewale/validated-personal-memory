@@ -1,0 +1,4 @@
+model,status,all_answer_payloads_present,same_explicit_settings,same_system_prompt,submitted_alias_matches
+deepseek-v4.1-flash:1017,CONSISTENT_SAVED_ENVELOPES,True,True,True,True
+gemma4:31b,CONSISTENT_SAVED_ENVELOPES,True,True,True,True
+glm-5.2,CONSISTENT_SAVED_ENVELOPES,True,True,True,True

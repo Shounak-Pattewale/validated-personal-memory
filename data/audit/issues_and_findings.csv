@@ -1,0 +1,4 @@
+check,status,detail
+V76 report recovered,FOUND,archive://experiments/final_memory_acceptance_v76/runs/run_001/snapshots/snapshot_000808.zip!closure.json
+V76 report recovered,FOUND,archive://experiments/final_memory_acceptance_v76/runs/run_001/snapshots/snapshot_000808.zip!final_report.json
+Configuration files,FOUND,1 configuration/manifest files found.

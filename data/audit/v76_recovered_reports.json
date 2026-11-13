@@ -1,0 +1,84 @@
+[
+  {
+    "source": "archive://experiments/final_memory_acceptance_v76/runs/run_001/snapshots/snapshot_000808.zip!closure.json",
+    "name": "closure.json",
+    "data": {
+      "advice_semantics": "UNREVIEWED; automated wording checks are not semantic certification",
+      "automatic_followup": false,
+      "decision": "BOUNDED_ACCEPTANCE_FAILED_KEEP_STAGED",
+      "deployment": false,
+      "distinct_messages": 109,
+      "exact_messages_seen_in_v73": 37,
+      "scope": "Structured single-operation memory middleware, fixed fields and bounded English. Novel instances of known patterns, not independent general-language reliability.",
+      "supported_strict": 119,
+      "supported_total": 120,
+      "total_turns": 128,
+      "training_updates": 0,
+      "version": "V76"
+    }
+  },
+  {
+    "source": "archive://experiments/final_memory_acceptance_v76/runs/run_001/snapshots/snapshot_000808.zip!final_report.json",
+    "name": "final_report.json",
+    "data": {
+      "advice_cases": 3,
+      "advice_proxy_pass": 3,
+      "automatic_extension": false,
+      "capacity_refusals": 2,
+      "checks": {
+        "all_cold_restores": true,
+        "all_receipt_protocols": true,
+        "complete_128": true,
+        "supported_all_120": false,
+        "unsupported_handled_safely": true,
+        "zero_collateral": true,
+        "zero_incorrect_mutations": true,
+        "zero_wrong_mutation_proposals": true
+      },
+      "cloud_requests_reserved": 144,
+      "completed_fixed_plan": true,
+      "counts": {
+        "answer_check": 128,
+        "changed_start": 0,
+        "cold_restore_exact": 128,
+        "collateral": 0,
+        "evidence_exact": 128,
+        "guard_blocked": 4,
+        "incorrect_mutation": 0,
+        "raw_exact": 127,
+        "raw_wrong_mutation": 0,
+        "receipt_exact": 123,
+        "receipt_protocol_valid": 128,
+        "route_exact": 128,
+        "state_exact": 128,
+        "strict": 123
+      },
+      "decision": "BOUNDED_ACCEPTANCE_FAILED_KEEP_STAGED",
+      "declined_changes": 2,
+      "deployment": false,
+      "expected_calls": 143,
+      "failed_supported_cases": [
+        "final_ambiguity_04"
+      ],
+      "limitations": [
+        "128 new authored trajectory instances of known V73 patterns, including repeated request wording; not an independent natural-language benchmark. One provider run.",
+        "120 supported turns plus 8 limitation probes. Four unsupported deletion requests remain unfulfilled even if safely blocked.",
+        "Exact READ returns evidence. Only the explicit Based on my recorded ... recommend/suggest/explain grammar invokes memory-grounded advice; arbitrary advice routing is not qualified.",
+        "Advice and ordinary prose checks are proxies; semantic review is not automatically imported.",
+        "One provider alias/run; no training, multi-model comparison or broad reliability estimate.",
+        "Correct capacity refusals and frozen declines pass outcome-contract checks but are not successful writes; both are reported separately. Capacity fixtures are not learned writes.",
+        "No arbitrary schema, dialogue pronouns, aliases, multi-action execution, large archives or secure erasure.",
+        "Original results remain frozen. No deployment or automatic follow-up."
+      ],
+      "maximum_calls": 260,
+      "no_memory_advice_proxy_pass": 1,
+      "personal_memory_changes": 0,
+      "semantic_review_required_for_advice": true,
+      "status": "complete",
+      "supported_cases": 120,
+      "supported_strict": 119,
+      "training_updates": 0,
+      "unsupported_explicit_requests_unfulfilled": 4
+    }
+  }
+]

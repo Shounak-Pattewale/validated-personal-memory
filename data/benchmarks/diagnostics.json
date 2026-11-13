@@ -1,0 +1,70 @@
+{
+  "gemma4:31b": {
+    "records": 41486,
+    "status": {
+      "ok": 41482,
+      "output_limit": 4
+    },
+    "sha256": "2681695a54e2dcdde2b67904cd33685cb67c0e9edb2a3ef93858c54a6e3fa57b",
+    "failed_attempts": 34
+  },
+  "nemotron-3-super": {
+    "records": 41486,
+    "status": {
+      "ok": 41427,
+      "output_limit": 59
+    },
+    "sha256": "bdce4845d5ca48f4812f5f7ade7f4992d9a6e24d9f5a72c05e99e94d70601d20",
+    "failed_attempts": 293
+  },
+  "over_context_count": 0,
+  "missing_input_tokens": 0,
+  "conversation_prompt_and_reference_matches": 4972,
+  "lme_dependence": {
+    "unique_complete_histories": 500,
+    "unique_evidence_sets": 495,
+    "evidence_components": 495,
+    "max_evidence_component": 2,
+    "unique_background_sessions": 19195,
+    "reused_background_sessions": 3942
+  },
+  "ruler_scores_recomputed": 78000,
+  "ruler_boundary": {
+    "gemma4:31b": {
+      "score": 0.9705807743589743,
+      "boundary_score": 0.9701679487179488,
+      "changed": 0.0004358974358974359
+    },
+    "nemotron-3-super": {
+      "score": 0.9505500230769232,
+      "boundary_score": 0.94543547008547,
+      "changed": 0.017794871794871794
+    }
+  },
+  "locomo_abstention": {
+    "gemma4:31b": {
+      "score": 0.9304932735426009,
+      "exact_phrase": 0.9282511210762332,
+      "broader_abstention_cue": 0.9304932735426009,
+      "words": 3.4820627802690582
+    },
+    "nemotron-3-super": {
+      "score": 0.5269058295964125,
+      "exact_phrase": 0.5067264573991032,
+      "broader_abstention_cue": 0.5269058295964125,
+      "words": 8.073991031390134
+    }
+  },
+  "lme_abstention": {
+    "false": {
+      "score_g": 0.7829787234042553,
+      "score_n": 0.5914893617021276,
+      "diff": 0.19148936170212766
+    },
+    "true": {
+      "score_g": 0.9,
+      "score_n": 0.5,
+      "diff": 0.4
+    }
+  }
+}

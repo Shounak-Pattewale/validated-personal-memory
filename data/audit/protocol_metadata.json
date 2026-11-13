@@ -1,0 +1,200 @@
+[
+  {
+    "path": "archive://experiments/comparative_memory_v77/multi_model_continuation/run_001/combined/final_report.json",
+    "data": {
+      "status": "complete",
+      "models": [
+        "deepseek-v4.1-flash:1017",
+        "gemma4:31b",
+        "glm-5.2"
+      ],
+      "techniques": [
+        "no_memory",
+        "full_history",
+        "recent_6",
+        "rolling_summary",
+        "bm25_6",
+        "dense_6",
+        "hybrid_6",
+        "middleware_selected",
+        "middleware_visible"
+      ],
+      "scored_answers": 1620,
+      "new_models": 2,
+      "decision": "MULTI_MODEL_COMPARISON_COMPLETE_NO_AUTOMATIC_WINNER",
+      "provenance": [
+        {
+          "run": "archive://local/94c1da06dd5dd2a6",
+          "report_sha256": "f3150816a12dc3473e60893154aa59bafca4e99af5787c899e6f0213fdf6da06",
+          "models": [
+            "deepseek-v4.1-flash:1017"
+          ]
+        },
+        {
+          "run": "archive://local/ee6d70139a0bff5a",
+          "report_sha256": "e83f642cc6b918b18b32d7ae26351d361fa3337c877c8ca92727a45f4b69e36e",
+          "models": [
+            "gemma4:31b"
+          ]
+        },
+        {
+          "run": "archive://local/195d81a1a9324084",
+          "report_sha256": "db50383f5134e626b80df6f5f84e2198ef0b89fb1a3358ea0447b143639afdc3",
+          "models": [
+            "glm-5.2"
+          ]
+        }
+      ],
+      "limitations": "Runs occurred at different times and are not interleaved. Provider drift/load and embedding cache timing are confounds. Six-family intervals are exploratory, not independent population evidence. Missing tokens/costs remain unavailable. Native safety and answer accuracy are separate. No automatic winner or deployment.",
+      "training_updates": 0,
+      "deployment": false
+    }
+  },
+  {
+    "path": "archive://experiments/comparative_memory_v77/multi_model_continuation/run_001/model_bb43a640f04c/final_report.json",
+    "data": {
+      "actual_inference_requests": 804,
+      "cold_queries_verified": 60,
+      "completed_fixed_plan": true,
+      "decision": "COMPARISON_COMPLETE_NO_AUTOMATIC_WINNER",
+      "deployment": false,
+      "expected_answers": 540,
+      "expected_inference_requests": 804,
+      "hard_maximum_requests": 1080,
+      "limitations": [
+        "Authored bounded lifecycle workload, six dependent families at two fictional-background lengths; not LoCoMo or LongMemEval scores.",
+        "Baseline reader protocols are standardized for exact values; this is not free-form conversation evaluation.",
+        "Middleware common-reader arms use the frozen interpreter and executor but replace response rendering with the same benchmark reader used by baselines.",
+        "Middleware selected/all-visible arms share one ingestion trace; each is charged the full interpreter cost for standalone attribution. Do not sum attributed costs across arms as actual billing.",
+        "Dense/hybrid arms share cached CPU embeddings; embedding build/query timing is recorded separately and must be included in standalone deployment analysis.",
+        "Each episode is independent; no conversation history from other episodes is provided.",
+        "Unsupported arbitrary fields, neural storage, multi-hop graph reasoning and exact secure erasure are not evaluated.",
+        "Native Mem0, Graphiti and Letta are not executed; no competitive product superiority claim.",
+        "Provider aliases can change; one scheduled generation per request, no retries or format repair.",
+        "Token counts are provider-reported when available. Missing metadata stays null. Monetary totals require supplied prices and are hypothetical token pricing, not subscription invoices.",
+        "Wall clock includes network/service time; provider timing is separate. Nonstreaming mode cannot measure time to first token.",
+        "Six-cluster intervals are exploratory; no significance or publication novelty claim."
+      ],
+      "models": [
+        "glm-5.2"
+      ],
+      "native_incorrect_mutations": 0,
+      "native_interpreter_turns": 162,
+      "native_proposals_exact": 159,
+      "native_states_exact": 162,
+      "native_wrong_mutation_proposals": 0,
+      "scored_answers": 540,
+      "status": "complete",
+      "techniques": [
+        "no_memory",
+        "full_history",
+        "recent_6",
+        "rolling_summary",
+        "bm25_6",
+        "dense_6",
+        "hybrid_6",
+        "middleware_selected",
+        "middleware_visible"
+      ],
+      "training_updates": 0
+    }
+  },
+  {
+    "path": "archive://experiments/comparative_memory_v77/multi_model_continuation/run_001/model_cdfe9e7730d7/final_report.json",
+    "data": {
+      "actual_inference_requests": 804,
+      "cold_queries_verified": 60,
+      "completed_fixed_plan": true,
+      "decision": "COMPARISON_COMPLETE_NO_AUTOMATIC_WINNER",
+      "deployment": false,
+      "expected_answers": 540,
+      "expected_inference_requests": 804,
+      "hard_maximum_requests": 1080,
+      "limitations": [
+        "Authored bounded lifecycle workload, six dependent families at two fictional-background lengths; not LoCoMo or LongMemEval scores.",
+        "Baseline reader protocols are standardized for exact values; this is not free-form conversation evaluation.",
+        "Middleware common-reader arms use the frozen interpreter and executor but replace response rendering with the same benchmark reader used by baselines.",
+        "Middleware selected/all-visible arms share one ingestion trace; each is charged the full interpreter cost for standalone attribution. Do not sum attributed costs across arms as actual billing.",
+        "Dense/hybrid arms share cached CPU embeddings; embedding build/query timing is recorded separately and must be included in standalone deployment analysis.",
+        "Each episode is independent; no conversation history from other episodes is provided.",
+        "Unsupported arbitrary fields, neural storage, multi-hop graph reasoning and exact secure erasure are not evaluated.",
+        "Native Mem0, Graphiti and Letta are not executed; no competitive product superiority claim.",
+        "Provider aliases can change; one scheduled generation per request, no retries or format repair.",
+        "Token counts are provider-reported when available. Missing metadata stays null. Monetary totals require supplied prices and are hypothetical token pricing, not subscription invoices.",
+        "Wall clock includes network/service time; provider timing is separate. Nonstreaming mode cannot measure time to first token.",
+        "Six-cluster intervals are exploratory; no significance or publication novelty claim."
+      ],
+      "models": [
+        "gemma4:31b"
+      ],
+      "native_incorrect_mutations": 0,
+      "native_interpreter_turns": 162,
+      "native_proposals_exact": 162,
+      "native_states_exact": 162,
+      "native_wrong_mutation_proposals": 0,
+      "scored_answers": 540,
+      "status": "complete",
+      "techniques": [
+        "no_memory",
+        "full_history",
+        "recent_6",
+        "rolling_summary",
+        "bm25_6",
+        "dense_6",
+        "hybrid_6",
+        "middleware_selected",
+        "middleware_visible"
+      ],
+      "training_updates": 0
+    }
+  },
+  {
+    "path": "archive://experiments/comparative_memory_v77/runs/run_001/final_report.json",
+    "data": {
+      "actual_inference_requests": 804,
+      "cold_queries_verified": 60,
+      "completed_fixed_plan": true,
+      "decision": "COMPARISON_COMPLETE_NO_AUTOMATIC_WINNER",
+      "deployment": false,
+      "expected_answers": 540,
+      "expected_inference_requests": 804,
+      "hard_maximum_requests": 1080,
+      "limitations": [
+        "Authored bounded lifecycle workload, six dependent families at two fictional-background lengths; not LoCoMo or LongMemEval scores.",
+        "Baseline reader protocols are standardized for exact values; this is not free-form conversation evaluation.",
+        "Middleware common-reader arms use the frozen interpreter and executor but replace response rendering with the same benchmark reader used by baselines.",
+        "Middleware selected/all-visible arms share one ingestion trace; each is charged the full interpreter cost for standalone attribution. Do not sum attributed costs across arms as actual billing.",
+        "Dense/hybrid arms share cached CPU embeddings; embedding build/query timing is recorded separately and must be included in standalone deployment analysis.",
+        "Each episode is independent; no conversation history from other episodes is provided.",
+        "Unsupported arbitrary fields, neural storage, multi-hop graph reasoning and exact secure erasure are not evaluated.",
+        "Native Mem0, Graphiti and Letta are not executed; no competitive product superiority claim.",
+        "Provider aliases can change; one scheduled generation per request, no retries or format repair.",
+        "Token counts are provider-reported when available. Missing metadata stays null. Monetary totals require supplied prices and are hypothetical token pricing, not subscription invoices.",
+        "Wall clock includes network/service time; provider timing is separate. Nonstreaming mode cannot measure time to first token.",
+        "Six-cluster intervals are exploratory; no significance or publication novelty claim."
+      ],
+      "models": [
+        "deepseek-v4.1-flash:1017"
+      ],
+      "native_incorrect_mutations": 0,
+      "native_interpreter_turns": 162,
+      "native_proposals_exact": 162,
+      "native_states_exact": 162,
+      "native_wrong_mutation_proposals": 0,
+      "scored_answers": 540,
+      "status": "complete",
+      "techniques": [
+        "no_memory",
+        "full_history",
+        "recent_6",
+        "rolling_summary",
+        "bm25_6",
+        "dense_6",
+        "hybrid_6",
+        "middleware_selected",
+        "middleware_visible"
+      ],
+      "training_updates": 0
+    }
+  }
+]

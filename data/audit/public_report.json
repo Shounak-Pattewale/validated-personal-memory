@@ -1,0 +1,299 @@
+{
+  "status": "PASS_WITH_DISCLOSURES",
+  "utc": "2026-11-12T01:24:52.119667+00:00",
+  "models": [
+    "gemma4:31b",
+    "nemotron-3-super"
+  ],
+  "judge": "deepseek-v4.1-flash:1017",
+  "policies": {
+    "gemma4:31b": {
+      "think": null,
+      "output": 2048,
+      "context": 262144
+    },
+    "nemotron-3-super": {
+      "think": false,
+      "output": 2048,
+      "context": 262144
+    },
+    "deepseek-v4.1-flash:1017": {
+      "think": false,
+      "output": 256,
+      "context": 262144
+    }
+  },
+  "benchmark_revisions": {
+    "locomo": "3eb6f2c585f5e1699204e3c3bdf7adc5c28cb376",
+    "longmemeval": "9e0b455f4ef0e2ab8f2e582289761153549043fc",
+    "ruler": "db43f92ff634bbce1c33d1fb15858aec4bba509a"
+  },
+  "longmemeval_revision": "98d7416c24c778c2fee6e6f3006e7a073259d48f",
+  "adapter_sha256": "ee95169b17e3db31620b3112ffe40d677ae044539a55ef542a4b6c962d7c29f8",
+  "checks": [
+    {
+      "check": "Expected benchmark plan",
+      "status": "PASS",
+      "detail": "{'RULER-v1-adapted': 39000, 'LongMemEval-S': 500, 'LoCoMo-QA': 1986}"
+    },
+    {
+      "check": "Independent common judge",
+      "status": "PASS",
+      "detail": "deepseek-v4.1-flash:1017"
+    },
+    {
+      "check": "Adapter matches original archive",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "gemma4:31b file stable while reading",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "gemma4:31b JSONL integrity",
+      "status": "PASS",
+      "detail": "0 malformed lines"
+    },
+    {
+      "check": "gemma4:31b disk matches runtime",
+      "status": "PASS",
+      "detail": "Difference may indicate unsynced Drive data or stale runtime; do not silently repair."
+    },
+    {
+      "check": "gemma4:31b no unresolved attempts",
+      "status": "PASS",
+      "detail": "0"
+    },
+    {
+      "check": "gemma4:31b no unanswered reservations",
+      "status": "PASS",
+      "detail": "0"
+    },
+    {
+      "check": "gemma4:31b no superseded success",
+      "status": "PASS",
+      "detail": "Detects an older error physically following a successful response."
+    },
+    {
+      "check": "gemma4:31b duplicate terminal events",
+      "status": "PASS",
+      "detail": "0"
+    },
+    {
+      "check": "nemotron-3-super file stable while reading",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "nemotron-3-super JSONL integrity",
+      "status": "PASS",
+      "detail": "0 malformed lines"
+    },
+    {
+      "check": "nemotron-3-super disk matches runtime",
+      "status": "PASS",
+      "detail": "Difference may indicate unsynced Drive data or stale runtime; do not silently repair."
+    },
+    {
+      "check": "nemotron-3-super no unresolved attempts",
+      "status": "PASS",
+      "detail": "0"
+    },
+    {
+      "check": "nemotron-3-super no unanswered reservations",
+      "status": "PASS",
+      "detail": "0"
+    },
+    {
+      "check": "nemotron-3-super no superseded success",
+      "status": "PASS",
+      "detail": "Detects an older error physically following a successful response."
+    },
+    {
+      "check": "nemotron-3-super duplicate terminal events",
+      "status": "PASS",
+      "detail": "0"
+    },
+    {
+      "check": "judge: deepseek-v4.1-flash:1017 file stable while reading",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "judge: deepseek-v4.1-flash:1017 JSONL integrity",
+      "status": "PASS",
+      "detail": "0 malformed lines"
+    },
+    {
+      "check": "judge: deepseek-v4.1-flash:1017 disk matches runtime",
+      "status": "PASS",
+      "detail": "Difference may indicate unsynced Drive data or stale runtime; do not silently repair."
+    },
+    {
+      "check": "judge: deepseek-v4.1-flash:1017 no unresolved attempts",
+      "status": "PASS",
+      "detail": "0"
+    },
+    {
+      "check": "judge: deepseek-v4.1-flash:1017 no unanswered reservations",
+      "status": "PASS",
+      "detail": "0"
+    },
+    {
+      "check": "judge: deepseek-v4.1-flash:1017 no superseded success",
+      "status": "PASS",
+      "detail": "Detects an older error physically following a successful response."
+    },
+    {
+      "check": "judge: deepseek-v4.1-flash:1017 duplicate terminal events",
+      "status": "PASS",
+      "detail": "0"
+    },
+    {
+      "check": "gemma4:31b exact answer coverage",
+      "status": "PASS",
+      "detail": "41,486/41,486; missing 0"
+    },
+    {
+      "check": "gemma4:31b output truncations",
+      "status": "WARN",
+      "detail": "{'RULER-v1-adapted': 4}"
+    },
+    {
+      "check": "nemotron-3-super exact answer coverage",
+      "status": "PASS",
+      "detail": "41,486/41,486; missing 0"
+    },
+    {
+      "check": "nemotron-3-super output truncations",
+      "status": "WARN",
+      "detail": "{'RULER-v1-adapted': 38, 'LongMemEval-S': 6, 'LoCoMo-QA': 15}"
+    },
+    {
+      "check": "Cross-model pairing coverage",
+      "status": "PASS",
+      "detail": "41,486 paired questions"
+    },
+    {
+      "check": "Judge exact identity coverage",
+      "status": "PASS",
+      "detail": "1000 records; 0 missing; 0 extra"
+    },
+    {
+      "check": "gemma4:31b valid LongMemEval grades",
+      "status": "PASS",
+      "detail": "500/500"
+    },
+    {
+      "check": "nemotron-3-super valid LongMemEval grades",
+      "status": "PASS",
+      "detail": "500/500"
+    },
+    {
+      "check": "gemma4:31b saved score CSV exists",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "gemma4:31b saved CSV coverage",
+      "status": "PASS",
+      "detail": "v80_gemma4_31b_3da462a6db_per_question.csv"
+    },
+    {
+      "check": "nemotron-3-super saved score CSV exists",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "nemotron-3-super saved CSV coverage",
+      "status": "PASS",
+      "detail": "v80_nemotron-3-super_38e6d608ef_per_question.csv"
+    },
+    {
+      "check": "No record-level audit issues",
+      "status": "PASS",
+      "detail": "0 issues; see issues CSV"
+    },
+    {
+      "check": "gemma4:31b unchanged through audit",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "nemotron-3-super unchanged through audit",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "judge: deepseek-v4.1-flash:1017 unchanged through audit",
+      "status": "PASS",
+      "detail": ""
+    }
+  ],
+  "history": [
+    {
+      "model": "gemma4:31b",
+      "failed_attempts": 34,
+      "failure_types": {
+        "http_error / HTTP 429": 33,
+        "http_error / HTTP 502": 1
+      },
+      "failed_cases": 34,
+      "recovered_cases": 34,
+      "unresolved_cases": 0
+    },
+    {
+      "model": "nemotron-3-super",
+      "failed_attempts": 293,
+      "failure_types": {
+        "http_error / HTTP 429": 38,
+        "http_error / HTTP 503": 251,
+        "http_error / HTTP 502": 4
+      },
+      "failed_cases": 277,
+      "recovered_cases": 277,
+      "unresolved_cases": 0
+    },
+    {
+      "model": "judge: deepseek-v4.1-flash:1017",
+      "failed_attempts": 0,
+      "failure_types": {},
+      "failed_cases": 0,
+      "recovered_cases": 0,
+      "unresolved_cases": 0
+    }
+  ],
+  "snapshots": [
+    {
+      "label": "gemma4:31b",
+      "file": "v79_gemma_events.jsonl",
+      "bytes": 64751263,
+      "sha256": "2681695a54e2dcdde2b67904cd33685cb67c0e9edb2a3ef93858c54a6e3fa57b",
+      "mtime_ns": 1794423996000000000
+    },
+    {
+      "label": "nemotron-3-super",
+      "file": "v80_nemotron-3-super_38e6d608ef_events.jsonl",
+      "bytes": 62571707,
+      "sha256": "bdce4845d5ca48f4812f5f7ade7f4992d9a6e24d9f5a72c05e99e94d70601d20",
+      "mtime_ns": 1794445280000000000
+    },
+    {
+      "label": "judge: deepseek-v4.1-flash:1017",
+      "file": "v80_judge_deepseek-v4_1-flash_1017_5b6fcdaf22_a7c155f439_events.jsonl",
+      "bytes": 1567521,
+      "sha256": "679e6dc2daef925e332ea2906c190a4eaf2d83259fa5bf089bdc32267f1966e8",
+      "mtime_ns": 1794445387000000000
+    }
+  ],
+  "issue_count": 0,
+  "scope": [
+    "Journal integrity and runtime agreement; exact question coverage; settings and raw-response consistency.",
+    "Cross-model prompt hashes and references; archived deterministic scoring body; exact judge-to-answer binding.",
+    "No full-dataset prompt regeneration, independent scorer implementation, native-tokenizer/context-truncation proof, or human judge review.",
+    "Passing is a technical audit, not a claim of publication readiness or statistical significance.",
+    "Drive is read through the current mount; checks do not independently verify server-side synchronization."
+  ]
+}

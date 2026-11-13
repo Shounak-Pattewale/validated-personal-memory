@@ -1,0 +1,14 @@
+{
+  "original_cases": 1986,
+  "unique_prompts": 1974,
+  "repeated_prompt_groups": 12,
+  "cross_category_conflict_groups": 1,
+  "unique_prompt_weighted": {
+    "gemma4:31b": 0.5301349543694529,
+    "nemotron-3-super": 0.42549076780970113
+  },
+  "excluding_cross_category_conflict": {
+    "gemma4:31b": 0.5305954649623992,
+    "nemotron-3-super": 0.4260093275277722
+  }
+}

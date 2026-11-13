@@ -1,0 +1,17 @@
+[
+  [
+    "cat5",
+    "No information available. The answer is definitely Paris.",
+    1.0
+  ],
+  [
+    "cat5",
+    "I cannot determine this from the conversation.",
+    0.0
+  ],
+  [
+    "cat1",
+    "red, blue, green, purple, orange",
+    1.0
+  ]
+]

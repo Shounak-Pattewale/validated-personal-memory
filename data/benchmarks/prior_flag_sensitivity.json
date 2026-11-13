@@ -1,0 +1,14 @@
+{
+  "flagged": 99,
+  "remaining_questions": 1441,
+  "gemma": 0.43140456034934077,
+  "nemotron": 0.4068565459655101,
+  "difference": 0.024548014383830676,
+  "ci": [
+    0.005314744309612097,
+    0.04535158586258834
+  ],
+  "source": "https://github.com/dial481/locomo-audit/blob/main/errors.json",
+  "source_sha256": "f298ef46263fada20688a1d672be37d4f488c6da3b19343eea55ae5c1b5fe55e",
+  "caveat": "Secondary exclusion of an external audit flag list, not independently established gold corrections. Some flags are debatable for open-domain questions. No original scores changed."
+}

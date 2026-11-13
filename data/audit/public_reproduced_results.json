@@ -1,0 +1,62 @@
+{
+  "LoCoMo-QA": {
+    "n": 1986,
+    "gemma": 0.5303128914830817,
+    "nemotron": 0.42572417930553874,
+    "difference": 0.10458871217754281,
+    "ci": [
+      0.08843518393622864,
+      0.12041830073036884
+    ],
+    "method": "Paired conversation-cluster bootstrap, 10 conversations, question-weighted ratio.",
+    "excluding_truncated_difference": 0.10590305970390664,
+    "worst_case_truncation_difference": 0.10023940765563948
+  },
+  "LongMemEval-S": {
+    "n": 500,
+    "gemma": 0.79,
+    "nemotron": 0.586,
+    "difference": 0.204,
+    "ci": [
+      0.1606425702811245,
+      0.248
+    ],
+    "method": "Paired shared-evidence-session cluster bootstrap, 495 components; reused background sessions not isolated.",
+    "excluding_truncated_difference": 0.20647773279352227,
+    "worst_case_truncation_difference": 0.198
+  },
+  "RULER-v1-adapted": {
+    "n": 39000,
+    "gemma": 0.9705807743589745,
+    "nemotron": 0.9505500230769232,
+    "difference": 0.02003075128205128,
+    "ci": [
+      0.01718541961538462,
+      0.022886307692307692
+    ],
+    "method": "Paired task-stratified sample-index block bootstrap across six lengths; fixed tasks and generation seed.",
+    "excluding_truncated_difference": 0.01918474511011859,
+    "worst_case_truncation_difference": 0.019087161538461538
+  },
+  "ruler_boundary": {
+    "gemma4:31b": {
+      "original": 0.9705807743589743,
+      "boundary": 0.9701679487179488
+    },
+    "nemotron-3-super": {
+      "original": 0.9505500230769232,
+      "boundary": 0.94543547008547
+    }
+  },
+  "locomo_nonadversarial": {
+    "gemma4:31b": {
+      "original": 0.41441649512397055,
+      "whole_answer_f1": 0.41261487523245977
+    },
+    "nemotron-3-super": {
+      "original": 0.3964209221448884,
+      "whole_answer_f1": 0.3760247674865091
+    }
+  },
+  "scorer_recomputations": 81972
+}

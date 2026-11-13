@@ -1,0 +1,3 @@
+kind,path,detail
+missing_prior_report,archive://experiments/final_memory_acceptance_v76/runs/run_001/final_report.json,May exist only in a snapshot; archive extraction intentionally not automatic.
+missing_prior_report,archive://experiments/final_memory_acceptance_v76/runs/run_001/closure.json,May exist only in a snapshot; archive extraction intentionally not automatic.
