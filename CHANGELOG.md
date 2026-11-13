@@ -3,7 +3,8 @@
 ## Publication formatting corrections - 2026-11-13
 
 - Added the Figure 2 cross-reference and consistent output-limit terminology.
-- Prevented line breaks within arXiv identifiers.
+- Prevented line breaks within arXiv identifiers and used upright Latin text.
+- Verified all reported brackets and wording in directly extracted PDF text.
 - Verified citation and interval brackets, equation punctuation, and unchanged results.
 
 ## Manuscript update - 2026-11-13
