@@ -1,5 +1,11 @@
 # Changelog
 
+## Manuscript update - 2026-11-13
+
+- Added the verified public repository URL and exact reproducibility scope.
+- Reported existing paired benchmark confidence intervals and their limitations.
+- Preserved all score data, numerical tables and the AI acknowledgement.
+
 ## 0.1.0 - 2026-11-13
 
 - Initial public release package for the manuscript draft.

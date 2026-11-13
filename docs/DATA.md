@@ -31,8 +31,9 @@ identify archived inputs that are not necessarily distributed here.
 `data/benchmarks/` also includes archived subgroup and sensitivity summaries.
 Archived outputs are labelled as such in the notebook. They must not be mistaken
 for analyses independently recomputed from answer text by this public package.
-The saved public summary includes paired confidence intervals even though the
-manuscript reports the benchmark comparison descriptively.
+The manuscript reports the saved paired confidence intervals, which the public
+analysis script reproduces from the released scores. Their interpretation remains
+conditional on saved generations and the specified grouping assumptions.
 
 `MANIFEST.json` hashes the actual distributed files after sanitisation. It is
 separate from the original audit source manifests. No scores or numeric findings

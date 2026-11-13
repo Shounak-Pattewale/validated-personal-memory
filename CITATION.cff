@@ -9,3 +9,4 @@ version: 0.1.0
 date-released: 2026-11-13
 license: MIT
 abstract: "Offline analysis code and saved evaluation exports for a bounded study of memory state correctness, answer reliability, and processing cost."
+repository-code: "https://github.com/Shounak-Pattewale/validated-personal-memory"

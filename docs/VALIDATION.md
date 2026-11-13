@@ -10,4 +10,4 @@
 - Notebook distributed with no stored output or execution counts.
 - No model API calls made.
 
-The manuscript PDF is unchanged from the supplied draft. Repository publication and an arXiv submission have not occurred.
+The repository was verified public on 2026-11-13. The revised manuscript compiles cleanly, preserves the numerical tables and AI acknowledgement, and includes the live repository URL and existing paired confidence intervals. An arXiv submission has not occurred.
