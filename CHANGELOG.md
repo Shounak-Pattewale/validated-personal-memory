@@ -1,5 +1,11 @@
 # Changelog
 
+## Publication formatting corrections - 2026-11-13
+
+- Added the Figure 2 cross-reference and consistent output-limit terminology.
+- Prevented line breaks within arXiv identifiers.
+- Verified citation and interval brackets, equation punctuation, and unchanged results.
+
 ## Manuscript update - 2026-11-13
 
 - Added the verified public repository URL and exact reproducibility scope.

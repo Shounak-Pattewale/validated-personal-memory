@@ -154,6 +154,7 @@ The primary offline audit examined 1,660 source files and reproduced all 1,620 r
 
 \section{Middleware Results}
 \subsection{Answer accuracy across context methods}
+Figure~\ref{fig:accuracy} summarises exact-answer accuracy across all nine context methods and three models.
 \begin{table}[ht]
 \centering
 \begin{tabular}{lrrr}
@@ -185,6 +186,7 @@ The background conditions affect the models differently. Gemma full-history accu
 \centering
 \includegraphics[width=0.93\linewidth]{figures/accuracy.pdf}
 \caption{Exact-answer accuracy under the strict protocol. Each cell contains 60 observations over the same six families. The shared questions and related scales must not be treated as independent replications.}
+\label{fig:accuracy}
 \end{figure}
 
 \subsection{Output validity and summary sensitivity}
@@ -282,7 +284,7 @@ A separate experiment evaluates \texttt{gemma4:31b} and \texttt{nemotron-3-super
 
 RULER uses 13 tasks, 500 examples per task, and six nominal reference-token lengths from 4,096 to 131,072. The run is explicitly adapted and does not constitute a canonical leaderboard reproduction. LongMemEval-S uses 500 saved answers per model and a common \texttt{deepseek-v4.1-flash:1017} judge, yielding 395 and 293 correct judgments. This is a single automated judge, not human adjudication. LoCoMo-QA uses a category-dependent scorer, including a keyword-based abstention rule. The scores therefore measure the recorded scoring protocol as well as model responses.
 
-These runs use an answer cap of 2,048 and a requested context setting of 262,144, unlike the primary comparison, which uses an answer cap of 1,024. Nemotron explicitly disables reasoning; Gemma leaves that setting to the provider default. Four Gemma outputs and 59 Nemotron outputs are marked as reaching the output limit. They are retained in the reported outcomes. The benchmark audit reports no unresolved HTTP-failure cases, but recovered attempts and provider differences limit any interpretation as a controlled comparison of model architectures.
+These runs use an answer cap of 2,048 and a requested context setting of 262,144, unlike the primary comparison, which uses an answer cap of 1,024. Nemotron explicitly disables reasoning; Gemma leaves that setting to the provider default. Four Gemma outputs and 59 Nemotron outputs are marked as truncated due to output limits. They are retained in the reported outcomes. The benchmark audit reports no unresolved HTTP-failure cases, but recovered attempts and provider differences limit any interpretation as a controlled comparison of model architectures.
 
 \subsection{Results across the three benchmarks}
 \begin{table}[H]
@@ -303,7 +305,7 @@ Gemma has the higher recorded score on each benchmark. On adapted RULER, its mea
 
 The released offline analysis uses 20,000 paired bootstrap samples. RULER resamples sample-index blocks within each task while retaining the six context lengths; LoCoMo resamples conversations; LongMemEval resamples 495 shared-evidence-session components. The resulting 95\% intervals for the Gemma-minus-Nemotron score difference are [0.017185, 0.022886] for adapted RULER, [0.160643, 0.248000] for LongMemEval-S, and [0.088435, 0.120418] for LoCoMo-QA. These intervals describe uncertainty under the recorded sampling structure. RULER tasks and the generation seed are fixed, LoCoMo contains only ten conversations, and reused background sessions are not isolated in the LongMemEval grouping.
 
-These comparisons describe the recorded model configurations and scoring protocols. The aggregate scores alone do not establish statistical significance or superiority across alternative prompts, provider versions, or reasoning settings. Truncated outputs remain included: Gemma has four in RULER; Nemotron has 38 in RULER, six in LongMemEval-S, and 15 in LoCoMo-QA. Their effects cannot be attributed to model capability independently of the output budget.
+These comparisons describe the recorded model configurations and scoring protocols. The aggregate scores alone do not establish statistical significance or superiority across alternative prompts, provider versions, or reasoning settings. Outputs truncated due to output limits remain included: Gemma has four in RULER; Nemotron has 38 in RULER, six in LongMemEval-S, and 15 in LoCoMo-QA. Their effects cannot be attributed to model capability independently of the output budget.
 
 \subsection{Interpretation and relation to the middleware study}
 Both configurations achieve high mean scores on the adapted synthetic RULER tasks while obtaining numerically lower scores on the conversational benchmarks. The benchmarks use different tasks and metrics, so these values do not measure a common scale of memory ability. In particular, the difference between RULER and the conversational scores cannot establish a causal failure of persistence, updating, or forgetting.
@@ -405,16 +407,16 @@ The primary offline analysis contains coverage, score, paired-comparison, cost, 
 The state audit is based on 486 traces, not 972: the two middleware reader conditions share ingestion. Likewise, 1,620 answer outputs represent 60 shared query cases evaluated by nine methods and three models. The smaller effective diversity of the workload is retained throughout the interpretation. The reproducibility package provides a numerical verification script that reconstructs the principal manuscript counts from the exported tables without model calls.
 
 \begin{thebibliography}{99}
-\bibitem{memgpt} Charles Packer, Sarah Wooders, Kevin Lin, Vivian Fang, Shishir G. Patil, Ion Stoica, and Joseph E. Gonzalez. 2023. MemGPT: Towards LLMs as Operating Systems. \emph{arXiv:2310.08560}. \url{https://arxiv.org/abs/2310.08560}.
-\bibitem{mem0} Prateek Chhikara, Dev Khant, Saket Aryan, Taranjeet Singh, and Deshraj Yadav. 2025. Mem0: Building Production-Ready AI Agents with Scalable Long-Term Memory. \emph{arXiv:2504.19413}. \url{https://arxiv.org/abs/2504.19413}.
-\bibitem{zep} Preston Rasmussen, Pavlo Paliychuk, Travis Beauvais, Jack Ryan, and Daniel Chalef. 2025. Zep: A Temporal Knowledge Graph Architecture for Agent Memory. \emph{arXiv:2501.13956}. \url{https://arxiv.org/abs/2501.13956}.
-\bibitem{amem} Wujiang Xu, Zujie Liang, Kai Mei, Hang Gao, Juntao Tan, and Yongfeng Zhang. 2025. A-MEM: Agentic Memory for LLM Agents. \emph{arXiv:2502.12110}. \url{https://arxiv.org/abs/2502.12110}.
-\bibitem{trustmem} Tianyu Yang, Sudipta Paul, Vijay Srinivasan, Vivek Kulkarni, and Srinivas Chappidi. 2026. TrustMem: Learning Trustworthy Memory Consolidation for LLM Agents with Long-Term Memory. \emph{arXiv:2606.25161}. \url{https://arxiv.org/abs/2606.25161}.
+\bibitem{memgpt} Charles Packer, Sarah Wooders, Kevin Lin, Vivian Fang, Shishir G. Patil, Ion Stoica, and Joseph E. Gonzalez. 2023. MemGPT: Towards LLMs as Operating Systems. \mbox{\emph{arXiv:2310.08560}}. \url{https://arxiv.org/abs/2310.08560}.
+\bibitem{mem0} Prateek Chhikara, Dev Khant, Saket Aryan, Taranjeet Singh, and Deshraj Yadav. 2025. Mem0: Building Production-Ready AI Agents with Scalable Long-Term Memory. \mbox{\emph{arXiv:2504.19413}}. \url{https://arxiv.org/abs/2504.19413}.
+\bibitem{zep} Preston Rasmussen, Pavlo Paliychuk, Travis Beauvais, Jack Ryan, and Daniel Chalef. 2025. Zep: A Temporal Knowledge Graph Architecture for Agent Memory. \mbox{\emph{arXiv:2501.13956}}. \url{https://arxiv.org/abs/2501.13956}.
+\bibitem{amem} Wujiang Xu, Zujie Liang, Kai Mei, Hang Gao, Juntao Tan, and Yongfeng Zhang. 2025. A-MEM: Agentic Memory for LLM Agents. \mbox{\emph{arXiv:2502.12110}}. \url{https://arxiv.org/abs/2502.12110}.
+\bibitem{trustmem} Tianyu Yang, Sudipta Paul, Vijay Srinivasan, Vivek Kulkarni, and Srinivas Chappidi. 2026. TrustMem: Learning Trustworthy Memory Consolidation for LLM Agents with Long-Term Memory. \mbox{\emph{arXiv:2606.25161}}. \url{https://arxiv.org/abs/2606.25161}.
 \bibitem{janus} Zihan Chen, Songwei Dong, Chengshuai Shi, Peng Wang, Song Wang, Cong Shen, and Jundong Li. 2026. The Past Is Prologue: A Plug-in Controller for Selective Updates in Sequentially Evolving LLM Memory. In \emph{Proceedings of EMNLP 2026}, pp. 15604-15620. \url{https://aclanthology.org/2026.emnlp-main.677/}.
 \bibitem{halumem} Ding Chen, Simin Niu, Li Kehang, Peng Liu, Xiangping Zheng, Bo Tang, Xinchi Li, Feiyu Xiong, and Zhiyu Li. 2026. HaluMem: Evaluating Hallucinations in Memory Systems of Agents. In \emph{Proceedings of EMNLP 2026}. \url{https://aclanthology.org/2026.emnlp-main.220/}.
-\bibitem{memoryagentbench} Yuanzhe Hu, Yu Wang, and Julian McAuley. 2025. Evaluating Memory in LLM Agents via Incremental Multi-Turn Interactions. \emph{arXiv:2507.05257}. \url{https://arxiv.org/abs/2507.05257}.
-\bibitem{longmemeval} Di Wu, Hongwei Wang, Wenhao Yu, Yuwei Zhang, Kai-Wei Chang, and Dong Yu. 2024. LongMemEval: Benchmarking Chat Assistants on Long-Term Interactive Memory. \emph{arXiv:2410.10813}. \url{https://arxiv.org/abs/2410.10813}.
+\bibitem{memoryagentbench} Yuanzhe Hu, Yu Wang, and Julian McAuley. 2025. Evaluating Memory in LLM Agents via Incremental Multi-Turn Interactions. \mbox{\emph{arXiv:2507.05257}}. \url{https://arxiv.org/abs/2507.05257}.
+\bibitem{longmemeval} Di Wu, Hongwei Wang, Wenhao Yu, Yuwei Zhang, Kai-Wei Chang, and Dong Yu. 2024. LongMemEval: Benchmarking Chat Assistants on Long-Term Interactive Memory. \mbox{\emph{arXiv:2410.10813}}. \url{https://arxiv.org/abs/2410.10813}.
 \bibitem{locomo} Adyasha Maharana, Dong-Ho Lee, Sergey Tulyakov, Mohit Bansal, Francesco Barbieri, and Yuwei Fang. 2024. Evaluating Very Long-Term Conversational Memory of LLM Agents. In \emph{Proceedings of ACL 2024}. \url{https://aclanthology.org/2024.acl-long.747/}.
-\bibitem{ruler} Cheng-Ping Hsieh, Simeng Sun, Samuel Kriman, Shantanu Acharya, Dima Rekesh, Fei Jia, Yang Zhang, and Boris Ginsburg. 2024. RULER: What's the Real Context Size of Your Long-Context Language Models? \emph{arXiv:2404.06654}. \url{https://arxiv.org/abs/2404.06654}.
+\bibitem{ruler} Cheng-Ping Hsieh, Simeng Sun, Samuel Kriman, Shantanu Acharya, Dima Rekesh, Fei Jia, Yang Zhang, and Boris Ginsburg. 2024. RULER: What's the Real Context Size of Your Long-Context Language Models? \mbox{\emph{arXiv:2404.06654}}. \url{https://arxiv.org/abs/2404.06654}.
 \end{thebibliography}
 \end{document}
