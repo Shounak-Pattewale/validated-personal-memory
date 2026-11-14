@@ -5,8 +5,24 @@ title: "Validated Personal Memory: Offline Research Artifacts"
 authors:
   - family-names: Pattewale
     given-names: Shounak
+    orcid: "https://orcid.org/0009-0003-4828-9333"
 version: 0.1.0
 date-released: 2026-11-13
 license: MIT
 abstract: "Offline analysis code and saved evaluation exports for a bounded study of memory state correctness, answer reliability, and processing cost."
 repository-code: "https://github.com/Shounak-Pattewale/validated-personal-memory"
+preferred-citation:
+  type: report
+  title: "Validated Personal Memory for Language Models: A Bounded Study of State Correctness, Answer Reliability, and Processing Cost"
+  authors:
+    - family-names: Pattewale
+      given-names: Shounak
+      orcid: "https://orcid.org/0009-0003-4828-9333"
+  doi: "10.5281/zenodo.24210707"
+  url: "https://zenodo.org/records/24210707"
+  year: 2026
+  date-published: 2026-11-14
+  version: "1.0"
+  publisher:
+    name: Zenodo
+  notes: "Research preprint; not peer reviewed."

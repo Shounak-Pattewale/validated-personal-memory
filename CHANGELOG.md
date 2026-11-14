@@ -1,5 +1,11 @@
 # Changelog
 
+## Zenodo preprint metadata - 2026-11-14
+
+- Linked the version 1.0 preprint, DOI 10.5281/zenodo.24210707.
+- Added author ORCID and a preferred paper citation to CITATION.cff.
+- Updated publishing guidance and checksums; research results and manuscript unchanged.
+
 ## Publication formatting corrections - 2026-11-13
 
 - Added the Figure 2 cross-reference and consistent output-limit terminology.

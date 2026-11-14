@@ -4,7 +4,7 @@ Research artifacts for **Validated Personal Memory for Language Models: A Bounde
 Study of State Correctness, Answer Reliability, and Processing Cost**, by
 **Shounak Pattewale**.
 
-[Read the paper](paper/paper.pdf) | [Offline notebook](notebooks/offline_analysis.ipynb) | [Data scope](docs/DATA.md)
+[Published preprint](https://doi.org/10.5281/zenodo.24210707) | [Paper PDF](paper/paper.pdf) | [Offline notebook](notebooks/offline_analysis.ipynb) | [Data scope](docs/DATA.md)
 
 This repository analyses saved experiments. **No model API keys, GPU, Drive mount,
 or model API calls are required.** Installing Python packages requires an internet
@@ -104,11 +104,16 @@ this public package does not repeat those text-level audits. See [data scope](do
 The authored workload is small and synthetic. Provider aliases and reasoning
 settings vary. The summary metric penalises upstream failures. Correct state
 alone does not prove correct interpretation, secure deletion or general memory
-reliability. This is a manuscript draft and artifact release, not a claim of
+reliability. This is a research preprint and artifact release, not a claim of
 peer-reviewed acceptance or a production-ready memory system.
 
 ## Citation and licenses
 
-Use CITATION.cff for artifact attribution. No DOI or arXiv identifier has been
-assigned in this package. Code is MIT licensed; original manuscript and analysis
+Use CITATION.cff to cite the paper and record the repository revision used.
+
+The preprint was published on Zenodo on 14 November 2026:
+https://doi.org/10.5281/zenodo.24210707 (version 1.0).
+Author ORCID: https://orcid.org/0009-0003-4828-9333.
+No arXiv identifier or peer-reviewed acceptance is claimed.
+ Code is MIT licensed; original manuscript and analysis
 content use CC BY 4.0. See LICENSE, LICENSE-CONTENT.md and docs/THIRD_PARTY.md.
